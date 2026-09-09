@@ -1,0 +1,36 @@
+{
+  "name": "शिल्पkaar — Artisan Business Manager",
+  "short_name": "शिल्पkaar",
+  "description": "Voice-first business manager for Indian artisans",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#6B1E10",
+  "background_color": "#FAF3E9",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "lang": "hi",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/apple-touch-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "New product", "short_name": "Add", "url": "/add", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Orders", "short_name": "Orders", "url": "/orders", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "share_target": {
+    "action": "/add",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [{ "name": "photos", "accept": ["image/*"] }]
+    }
+  },
+  "screenshots": [
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "form_factor": "narrow" }
+  ]
+}

@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Artisan {
+  id               String    @id @default(cuid())
+  phone            String    @unique
+  name             String
+  slug             String    @unique
+  language         String    @default("hi")
+  craft            String
+  clusterId        String?
+  district         String
+  state            String
+  gstMode          String    @default("NONE")
+  gstin            String?
+  enrolmentNumber  String?
+  upiId            String?
+  verifiedVia      String?
+  dayWage          Int       @default(500)
+  products         Product[]
+  orders           Order[]
+  createdAt        DateTime  @default(now())
+}
+
+model Product {
+  id             String         @id @default(cuid())
+  artisanId      String
+  artisan        Artisan        @relation(fields: [artisanId], references: [id])
+  slug           String
+  titleEn        String
+  titleHi        String
+  descriptionEn  String
+  descriptionHi  String
+  keywords       String
+  attributes     String
+  hsnCode        String?
+  materialCost   Int
+  daysOfWork     Float
+  floorPrice     Int
+  suggestedPrice Int
+  premiumPrice   Int
+  publishedPrice Int
+  stock          Int            @default(1)
+  status         String         @default("DRAFT")
+  views          Int            @default(0)
+  media          Media[]
+  channelStates  ChannelState[]
+  createdAt      DateTime       @default(now())
+  @@unique([artisanId, slug])
+}
+
+model Media {
+  id          String  @id @default(cuid())
+  productId   String
+  product     Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  role        String
+  originalUrl String
+  enhancedUrl String
+  renditions  String
+  fidelity    String
+}
+
+model ChannelState {
+  id           String   @id @default(cuid())
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  channel      String
+  status       String
+  externalId   String?
+  blockers     String
+  lastSyncedAt DateTime?
+}
+
+model Order {
+  id        String   @id @default(cuid())
+  artisanId String
+  artisan   Artisan  @relation(fields: [artisanId], references: [id])
+  status    String
+  amount    Int
+  channel   String
+  buyerName String
+  buyerPhone String
+  items     String
+  timeline  String
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" opacity="0.04">
+<!-- subtle kalamkari / block-print motif tiled -->
+<g fill="none" stroke="#4A1108" stroke-width="1.2">
+  <circle cx="70" cy="70" r="18"/>
+  <circle cx="70" cy="70" r="8"/>
+  <path d="M70 52 L74 62 L84 62 L76 68 L78 78 L70 72 L62 78 L64 68 L56 62 L66 62 Z" fill="#4A1108" stroke="none" opacity="0.06"/>
+  <circle cx="210" cy="70" r="18"/>
+  <circle cx="210" cy="70" r="8"/>
+  <circle cx="70" cy="210" r="18"/>
+  <circle cx="70" cy="210" r="8"/>
+  <circle cx="210" cy="210" r="18"/>
+  <circle cx="210" cy="210" r="8"/>
+  <circle cx="140" cy="140" r="22"/>
+  <circle cx="140" cy="140" r="10"/>
+  <path d="M40 140 Q70 120 100 140 Q70 160 40 140" />
+  <path d="M180 140 Q210 120 240 140 Q210 160 180 140" />
+  <path d="M140 40 Q120 70 140 100 Q160 70 140 40" />
+  <path d="M140 180 Q120 210 140 240 Q160 210 140 180" />
+  <g opacity="0.5">
+    <path d="M70 90 C70 100 60 110 50 115"/>
+    <path d="M210 90 C210 100 220 110 230 115"/>
+    <path d="M70 190 C70 180 60 170 50 165"/>
+    <path d="M210 190 C210 180 220 170 230 165"/>
+  </g>
+</g>
+</svg>

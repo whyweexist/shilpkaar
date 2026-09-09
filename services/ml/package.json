@@ -1,0 +1,11 @@
+{
+  "name": "@shilpkaar/ml",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "uvicorn app:app --host 0.0.0.0 --port 8000 --reload",
+    "build": "echo \"ml build noop\"",
+    "typecheck": "echo \"ml typecheck noop\"",
+    "lint": "echo \"ml lint noop\""
+  }
+}

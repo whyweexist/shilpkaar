@@ -1,0 +1,14 @@
+node_modules
+dist
+.turbo
+.env
+.env.local
+*.tsbuildinfo
+apps/web/dist
+apps/api/dist
+services/ml/__pycache__
+services/ml/.venv
+services/ml/models/*.txt
+services/ml/models/*.npz
+services/ml/models/*.onnx
+.DS_Store

@@ -1,0 +1,22 @@
+{
+  "greeting_morning": "শুভ সকাল",
+  "greeting_afternoon": "নমস্কার",
+  "greeting_evening": "শুভ সন্ধ্যা",
+  "grow_today": "চলুন আজ আপনার শিল্প বাড়িয়ে তুলি",
+  "voice_title": "বলুন ও লিস্ট করুন",
+  "voice_hint": "আপনার কণ্ঠে পণ্য লিস্ট করুন",
+  "orders": "অর্ডার",
+  "earnings": "আয়",
+  "marketplaces": "বাজার",
+  "today": "আজ",
+  "connected": "সংযুক্ত",
+  "active": "সক্রিয়",
+  "my_products": "আমার পণ্য",
+  "see_all": "সব দেখুন",
+  "in_stock": "স্টকে আছে",
+  "low_stock": "স্টক কম",
+  "out_of_stock": "স্টক শেষ",
+  "views": "ভিউ",
+  "listed": "তালিকাভুক্ত",
+  "draft": "খসড়া"
+}

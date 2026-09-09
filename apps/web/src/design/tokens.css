@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand — warm terracotta / oxblood craft palette */
+  --clr-maroon-900: #4a1108;
+  --clr-maroon-800: #6b1e10;
+  --clr-maroon-700: #8a3418;
+  --clr-terracotta: #e0762f;
+  --clr-terracotta-lt: #f2913f;
+  --clr-gold: #f2c185;
+  --clr-cream: #faf3e9;
+  --clr-cream-2: #f4e9d8;
+  --clr-surface: #ffffff;
+  --clr-ink: #3a2318;
+  --clr-ink-soft: #7c6152;
+  --clr-on-maroon: #fff3e4;
+  --clr-success: #2e9e5b;
+  --clr-warn: #d98a1f;
+  --clr-danger: #c0392b;
+  --clr-border: rgba(58, 35, 24, 0.08);
+
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-full: 999px;
+
+  --shadow-card: 0 2px 12px rgba(74, 17, 8, 0.06);
+  --shadow-raise: 0 8px 24px rgba(74, 17, 8, 0.12);
+  --shadow-glow: 0 6px 20px rgba(224, 118, 47, 0.45);
+
+  --font-display: "Tiro Devanagari Hindi", "Noto Serif Devanagari", serif;
+  --font-ui: "Inter", "Noto Sans", system-ui, sans-serif;
+  --font-indic: "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Tamil", sans-serif;
+
+  --app-max-w: 430px;
+  --pad-x: 18px;
+  --nav-h: 68px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  background: var(--clr-cream);
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-ui);
+  color: var(--clr-ink);
+  background: var(--clr-cream);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-shell-bg {
+  background-color: var(--clr-cream);
+  background-image: url("/patterns/blockprint.svg");
+  background-repeat: repeat;
+  background-size: 280px 280px;
+  background-attachment: fixed;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--clr-terracotta);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 17, 8, 0.15);
+  border-radius: 999px;
+}

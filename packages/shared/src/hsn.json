@@ -1,0 +1,33 @@
+{
+  "terracotta": {
+    "hsn": "69120010",
+    "gemCategory": "Handicraft - Terracotta",
+    "spec": ["Material: Earthen clay", "Firing: Kiln"]
+  },
+  "handloom": {
+    "hsn": "52083100",
+    "gemCategory": "Handloom Textile",
+    "spec": ["Weave: Handloom", "Material: Cotton"]
+  },
+  "chanderi": {
+    "hsn": "52085120",
+    "gemCategory": "Chanderi Fabric",
+    "spec": ["Technique: Chanderi"]
+  },
+  "dhokra": {
+    "hsn": "83062100",
+    "gemCategory": "Metal Craft - Dhokra",
+    "spec": ["Process: Lost-wax casting"]
+  },
+  "madhubani": {
+    "hsn": "49119100",
+    "gemCategory": "Painting - Madhubani",
+    "spec": ["Base: Handmade paper"]
+  },
+  "blue pottery": {
+    "hsn": "69120090",
+    "gemCategory": "Ceramic - Blue Pottery",
+    "spec": ["Glaze: Blue"]
+  },
+  "default": { "hsn": "97030000", "gemCategory": "Handicraft - Other", "spec": [] }
+}

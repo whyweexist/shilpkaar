@@ -1,0 +1,22 @@
+{
+  "greeting_morning": "Good Morning",
+  "greeting_afternoon": "Good Afternoon",
+  "greeting_evening": "Good Evening",
+  "grow_today": "Let's grow your craft today",
+  "voice_title": "Bolke List Karo",
+  "voice_hint": "Tap or say to list your product via voice",
+  "orders": "Orders",
+  "earnings": "Earnings",
+  "marketplaces": "Marketplaces",
+  "today": "today",
+  "connected": "Connected",
+  "active": "Active",
+  "my_products": "My Products",
+  "see_all": "See all",
+  "in_stock": "In stock",
+  "low_stock": "Low stock",
+  "out_of_stock": "Out of stock",
+  "views": "views",
+  "listed": "Listed",
+  "draft": "Draft"
+}

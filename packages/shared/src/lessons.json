@@ -1,0 +1,56 @@
+[
+  {
+    "id": "first-listing",
+    "trigger": "first_listing",
+    "title_hi": "पहली लिस्टिंग हुई!",
+    "title_en": "First listing live!",
+    "script_hi": "बधाई हो, आपकी पहली लिस्टिंग तैयार है। अब इसे चार बाजारों में भेजेंगे और आपको ऑर्डर की आवाज सुनाएंगे।",
+    "script_en": "Congrats, your first listing is live. Now we push to four channels and alert you on orders.",
+    "illustration": "🎉"
+  },
+  {
+    "id": "first-return",
+    "trigger": "first_return",
+    "title_hi": "रिटर्न कैसे संभालें",
+    "title_en": "Handle a return",
+    "script_hi": "रिटर्न का कारण आवाज से बताएं। हम तस्वीर की सच्चाई जांचेंगे ताकि अगली बार गलती न हो।",
+    "script_en": "Tell the return reason by voice. We check photo fidelity so next time it matches.",
+    "illustration": "📦"
+  },
+  {
+    "id": "stale-14",
+    "trigger": "stale_14",
+    "title_hi": "14 दिन से कोई ऑर्डर नहीं?",
+    "title_en": "No order in 14 days?",
+    "script_hi": "कीमत या फोटो बदलें। हम बताएंगे क्या सुधारना है।",
+    "script_en": "Try a price or photo tweak. We will suggest what to improve.",
+    "illustration": "💡"
+  },
+  {
+    "id": "low-photo",
+    "trigger": "low_photo",
+    "title_hi": "सिर्फ एक फोटो?",
+    "title_en": "Only one photo?",
+    "script_hi": "पांच फोटो जोड़ें — आगे, पीछे, बनावट, साइज, और आप की फोटो। बिक्री दोगुनी होती है।",
+    "script_en": "Add five shots — front, back, texture, scale, maker. Sales double.",
+    "illustration": "📸"
+  },
+  {
+    "id": "gst-alert",
+    "trigger": "gst_threshold",
+    "title_hi": "GST सीमा पास",
+    "title_en": "GST threshold near",
+    "script_hi": "आप चालीस लाख के पास हैं। GST की तैयारी शुरू करें।",
+    "script_en": "You are near 40 lakh. Prepare for GST.",
+    "illustration": "🧾"
+  },
+  {
+    "id": "onboarding",
+    "trigger": "onboarding",
+    "title_hi": "बोलके बेचना सीखें",
+    "title_en": "Learn voice selling",
+    "script_hi": "बस बोलें, हम लिस्ट बनाएंगे। कोई टाइपिंग नहीं।",
+    "script_en": "Just speak, we create the listing. No typing.",
+    "illustration": "🎙️"
+  }
+]

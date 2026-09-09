@@ -1,0 +1,29 @@
+{
+  "name": "Shilpkaar",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20", "installYarnUsingApt": false },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" }
+  },
+  "forwardPorts": [5173, 4000, 8000],
+  "portsAttributes": {
+    "5173": { "label": "web", "onAutoForward": "notify", "visibility": "public" },
+    "4000": { "label": "api", "onAutoForward": "notify", "visibility": "public" },
+    "8000": { "label": "ml", "onAutoForward": "notify", "visibility": "public" }
+  },
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@9.12.1 --activate && pnpm install && pip install -r services/ml/requirements.txt && python services/ml/train/train_pricing.py && python services/ml/train/build_comps.py && pnpm --filter @shilpkaar/shared build && pnpm --filter @shilpkaar/shared test && DATABASE_URL=\"file:./dev.db\" pnpm --filter @shilpkaar/api db:push && pnpm --filter @shilpkaar/api db:seed",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+  "remoteEnv": { "PNPM_HOME": "/home/codespace/.local/share/pnpm" }
+}

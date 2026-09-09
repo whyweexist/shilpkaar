@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "composite": true,
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    "declaration": true
+  },
+  "include": ["src", "src/ontology.json", "src/lessons.json", "src/hsn.json"]
+}

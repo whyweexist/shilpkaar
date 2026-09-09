@@ -1,0 +1,67 @@
+services:
+  - type: web
+    name: shilpkaar-api
+    runtime: node
+    plan: free
+    buildCommand: pnpm install --frozen-lockfile && pnpm --filter @shilpkaar/shared build && pnpm --filter @shilpkaar/api build
+    startCommand: pnpm --filter @shilpkaar/api start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        fromDatabase:
+          name: shilpkaar-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ML_SERVICE_URL
+        fromService:
+          name: shilpkaar-ml
+          type: web
+          property: host
+          envVarKey: host
+      - key: PORT
+        value: 10000
+  - type: web
+    name: shilpkaar-ml
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    rootDir: services/ml
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+  - type: web
+    name: shilpkaar-web
+    runtime: static
+    plan: free
+    buildCommand: pnpm install --frozen-lockfile && pnpm --filter @shilpkaar/shared build && pnpm --filter @shilpkaar/web build
+    staticPublishPath: apps/web/dist
+    # Vite bakes these into the bundle at build time (Render injects static-site
+    # env vars during build). Without them the app falls back to relative /api/*
+    # fetches, which don't exist on the static host. Keep hostnames in sync with
+    # the service names above and the /s/* rewrite destinations below.
+    envVars:
+      - key: VITE_API_URL
+        value: https://shilpkaar-api.onrender.com
+      - key: VITE_ML_URL
+        value: https://shilpkaar-ml.onrender.com
+    routes:
+      - type: rewrite
+        source: /s/:artisan/:product/qr
+        destination: https://shilpkaar-api.onrender.com/s/:artisan/:product/qr
+      - type: rewrite
+        source: /s/*
+        destination: https://shilpkaar-api.onrender.com/s/*
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases:
+  - name: shilpkaar-db
+    plan: free
+    databaseName: shilpkaar
+    user: shilpkaar

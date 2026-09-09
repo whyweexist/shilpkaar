@@ -1,0 +1,32 @@
+export const tokens = {
+  colors: {
+    maroon900: "#4A1108",
+    maroon800: "#6B1E10",
+    maroon700: "#8A3418",
+    terracotta: "#E0762F",
+    terracottaLt: "#F2913F",
+    gold: "#F2C185",
+    cream: "#FAF3E9",
+    cream2: "#F4E9D8",
+    surface: "#FFFFFF",
+    ink: "#3A2318",
+    inkSoft: "#7C6152",
+    onMaroon: "#FFF3E4",
+    success: "#2E9E5B",
+    warn: "#D98A1F",
+    danger: "#C0392B",
+    border: "rgba(58,35,24,0.08)",
+  },
+  radius: { sm: "12px", md: "16px", lg: "20px", xl: "28px", full: "999px" },
+  shadow: {
+    card: "0 2px 12px rgba(74,17,8,0.06)",
+    raise: "0 8px 24px rgba(74,17,8,0.12)",
+    glow: "0 6px 20px rgba(224,118,47,0.45)",
+  },
+  font: {
+    display: "'Tiro Devanagari Hindi','Noto Serif Devanagari',serif",
+    ui: "'Inter','Noto Sans',system-ui,sans-serif",
+    indic: "'Noto Sans Devanagari','Noto Sans Bengali','Noto Sans Tamil',sans-serif",
+  },
+  layout: { appMaxW: "430px", padX: "18px", navH: "68px" },
+} as const;

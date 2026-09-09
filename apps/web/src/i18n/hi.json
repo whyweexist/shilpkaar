@@ -1,0 +1,22 @@
+{
+  "greeting_morning": "सुप्रभात",
+  "greeting_afternoon": "नमस्कार",
+  "greeting_evening": "शुभ संध्या",
+  "grow_today": "आइए आज अपने शिल्प को बढ़ाएँ",
+  "voice_title": "बोलके लिस्ट करो",
+  "voice_hint": "बोलके लिस्ट करो • अपनी आवाज़ से प्रोडक्ट लिस्ट करें",
+  "orders": "ऑर्डर",
+  "earnings": "कमाई",
+  "marketplaces": "बाज़ार",
+  "today": "आज",
+  "connected": "जुड़ा हुआ",
+  "active": "सक्रिय",
+  "my_products": "मेरे उत्पाद",
+  "see_all": "सभी देखें",
+  "in_stock": "स्टॉक में",
+  "low_stock": "कम स्टॉक",
+  "out_of_stock": "स्टॉक खत्म",
+  "views": "व्यूज़",
+  "listed": "लिस्टेड",
+  "draft": "ड्राफ्ट"
+}

@@ -1,0 +1,27 @@
+{
+  "categories": [
+    "terracotta",
+    "handloom",
+    "chanderi",
+    "dhokra",
+    "madhubani",
+    "blue pottery",
+    "kantha",
+    "bandhani"
+  ],
+  "materials": [
+    "cotton",
+    "silk",
+    "wool",
+    "brass",
+    "clay",
+    "wood",
+    "jute",
+    "mixed"
+  ],
+  "seasons": [
+    "neutral",
+    "festive",
+    "wedding"
+  ]
+}
