@@ -88,11 +88,11 @@ export function Home() {
           </span>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 w-full min-w-0">
           <VoiceHeroCard />
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 w-full min-w-0">
           <SectionHeader title="My Products" />
           <div className="mt-3 grid grid-cols-2 gap-3">
             {topProducts.map((p) => (

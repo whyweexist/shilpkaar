@@ -1,31 +1,32 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "typecheck": {
-      "dependsOn": ["^build"]
-    },
-    "lint": {},
-    "lint:fix": {},
-    "test": {
-      "dependsOn": ["build"]
-    },
-    "clean": {
-      "cache": false
-    },
-    "db:push": {
-      "cache": false
-    },
-    "db:seed": {
-      "cache": false
-    }
-  }
+"$schema": "https://turbo.build/schema.json",
+"globalDependencies": ["**/.env.*local"],
+"tasks": {
+"build": {
+"dependsOn": ["^build"],
+"outputs": ["dist/", ".next/", "!.next/cache/"]
+},
+"dev": {
+"dependsOn": ["^build"],
+"cache": false,
+"persistent": true
+},
+"typecheck": {
+"dependsOn": ["^build"]
+},
+"lint": {},
+"lint:fix": {},
+"test": {
+"dependsOn": ["build"]
+},
+"clean": {
+"cache": false
+},
+"db:push": {
+"cache": false
+},
+"db:seed": {
+"cache": false
+}
+}
 }

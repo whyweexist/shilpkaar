@@ -29,11 +29,10 @@ export function VoiceHeroCard() {
 
   return (
     <div
-      className="relative flex flex-col items-center justify-center overflow-hidden px-4 py-6 text-center"
+      className="relative flex min-h-[190px] w-full min-w-0 flex-col items-center justify-center overflow-hidden px-4 py-6 text-center sm:px-6"
       style={{
         background: `linear-gradient(180deg, #5A1A0D 0%, #7A2E18 100%)`,
         borderRadius: "var(--r-xl)",
-        minHeight: "190px",
         boxShadow: "var(--shadow-card)",
       }}
     >
@@ -55,7 +54,7 @@ export function VoiceHeroCard() {
       />
 
       <div
-        className="relative flex"
+        className="relative flex shrink-0"
         onTouchStart={() => {
           timer.current = window.setTimeout(handleLongPress, 600);
         }}
@@ -75,7 +74,7 @@ export function VoiceHeroCard() {
         </div>
       </div>
       <h2
-        className="relative mt-4"
+        className="relative mt-4 max-w-full break-words"
         style={{
           fontSize: "22px",
           fontWeight: 700,
@@ -86,7 +85,7 @@ export function VoiceHeroCard() {
         Bolke List Karo
       </h2>
       <p
-        className="relative mt-1 max-w-[260px]"
+        className="relative mt-1 w-full max-w-[260px] break-words"
         style={{ fontSize: "12.5px", color: "rgba(242,193,133,0.75)", lineHeight: 1.4 }}
       >
         बोलके लिस्ट करो • Tap or say to list your product via voice
