@@ -8,9 +8,12 @@
 ## Quick start (Codespaces / local)
 
 ```bash
-pnpm install
-python services/ml/train/train_pricing.py   # trains LightGBM pricing models (idempotent)
-pnpm dev                                    # web :5173 • api :4000 • ml :8000 (parallel, colour-coded)
+
+
+
+
+
+                          # web :5173 • api :4000 • ml :8000 (parallel, colour-coded)
 ```
 
 Zero environment variables needed. `.env.example` documents every optional var.

@@ -5,3 +5,4 @@ Pillow==10.4.0
 onnxruntime==1.18.0
 scikit-learn==1.4.2
 lightgbm==4.3.0
+python-multipart
